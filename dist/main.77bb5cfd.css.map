@@ -1,1 +1,1 @@
-{"version":3,"sources":["scss\\main.scss"],"names":[],"mappings":"AAEA;EACI,kBAHK","file":"main.77bb5cfd.css","sourceRoot":"..\\src","sourcesContent":["$salmon: salmon;\r\n\r\nbody {\r\n    background-color: $salmon;\r\n}"]}
+{"version":3,"sources":["scss/main.scss"],"names":[],"mappings":"AAAA","file":"main.77bb5cfd.css","sourceRoot":"..\\src","sourcesContent":[""]}
