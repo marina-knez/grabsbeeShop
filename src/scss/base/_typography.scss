@@ -1,0 +1,108 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body__type);
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: var(--theme__color__neutral__light);
+  color: var(--theme__color__default_type);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings__type);
+  margin-bottom: 21px;
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+
+  @media (--large) {
+    font-size: 28px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+
+  @media (--large) {
+    font-size: 28px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+
+  @media (--large) {
+    font-size: 22px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 15px;
+
+  @media (--large) {
+    font-size: 20px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+
+  @media (--large) {
+    font-size: 17px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 13px;
+
+  @media (--large) {
+    font-size: 16px;
+  }
+}
+
+p {
+  margin-bottom: 21px;
+  @media (--large) {
+  }
+}
+
+a {
+  @include ui-default-transition (color);
+  cursor: pointer;
+}
+
+ul {
+  @include list-reset;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Inchoo-Icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.5;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
