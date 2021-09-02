@@ -1,0 +1,79 @@
+@mixin position ($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute ($top, $right, $bottom, $left) {
+    @include position($top, $right, $bottom, $left);
+}
+
+@mixin ui-default-transition ($prototype) {
+    transition: $proptype 460ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+@mixin no-display {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin flex ($direction, $vcenter, $hcenter, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $vcenter;
+    justify-content: $hcenter;
+    flex-wrap: $wrap;
+}
+
+@mixin container ($max-width, $gutter-width) {
+    min-width: 320px;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+}
+
+@mixin ui-default-transition ($proptype) {
+    transition: $proptype 460ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+@mixin section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin aspect-ratio-calc ($height, $width) {
+    &::before {
+      content: "";
+      width: 1px;
+      margin-left: -1px;
+      float: left;
+      height: 0;
+      padding-bottom: calc(($height / $width) * 100%);
+    }
+  
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+  
+@mixin aspect-ratio-calc-old ($height, $width) {
+    height: 0;
+    padding-bottom: calc(($height / $width) * 100%);
+}
