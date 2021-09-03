@@ -27,7 +27,7 @@ h1,
 .h1 {
   font-size: 24px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 28px;
   }
 }
@@ -36,7 +36,7 @@ h2,
 .h2 {
   font-size: 24px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 28px;
   }
 }
@@ -45,7 +45,7 @@ h3,
 .h3 {
   font-size: 16px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 22px;
   }
 }
@@ -54,7 +54,7 @@ h4,
 .h4 {
   font-size: 15px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 20px;
   }
 }
@@ -63,7 +63,7 @@ h5,
 .h5 {
   font-size: 14px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 17px;
   }
 }
@@ -72,14 +72,14 @@ h6,
 .h6 {
   font-size: 13px;
 
-  @media (--large) {
+  @include desktop {
     font-size: 16px;
   }
 }
 
 p {
   margin-bottom: 21px;
-  @media (--large) {
+  @include desktop {
   }
 }
 
@@ -92,10 +92,9 @@ ul {
   @include list-reset;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="fa-"],
+[class*=" fa-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "Inchoo-Icons" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

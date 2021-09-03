@@ -1,2 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap");
+:root {
+  --blue-color: #12167a;
+  --red-color: #ec1d2e;
+  --neutral-color: #4E4E4E;
+  --pure-black: #000;
+  /* Primary colors */
+  --primary__color: var(--blue-color);
+  --primary-10: #b9121d;
+  --primary-20: #d41727;
+  --primary-30: #740d15;
+  /* Secondary colors */
+  --secondary__color: var(--red-color);
+  /* Neutral colors */
+  --text__color: var(--neutral-color);
+  --text__color__invert: #FFF;
+  /* Icons*/
+  --icon-regular__color: var(--neutral-color);
+  --icon-dark-bg__color: var(--text__color__invert);
+  --icon-indicator__color: var(--neutral-color);
+  --icon-indicator-dark-bg__color: #666666;
+  --icon-link: var(--red-color);
+  /* Links */
+  --link__color: var(--primary__color);
+  --link__visited__color: var(--primary-10);
+  --link__hover__color: var(--primary-20);
+  --link__active__color: var(--primary-30);
+  /* Buttons */
+  --button-primary__background: var(--primary__color);
+  --button-primary__background--hover: var(--secondary__color);
+  --button-secondary__background__border: var(--secondary__color);
+  --button-secondary__background__color: var(--secondary__color);
+  /* Headings */
+  --headings__type: "Anton", sans-serif;
+  --body__type: "Open Sans", sans-serif;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--body__type);
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: var(--theme__color__neutral__light);
+  color: var(--theme__color__default_type);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings__type);
+  margin-bottom: 21px;
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+}
+@media (min-width: 1024px) {
+  h1,
+.h1 {
+    font-size: 28px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+@media (min-width: 1024px) {
+  h2,
+.h2 {
+    font-size: 28px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  h3,
+.h3 {
+    font-size: 22px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 15px;
+}
+@media (min-width: 1024px) {
+  h4,
+.h4 {
+    font-size: 20px;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  h5,
+.h5 {
+    font-size: 17px;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 13px;
+}
+@media (min-width: 1024px) {
+  h6,
+.h6 {
+    font-size: 16px;
+  }
+}
+
+p {
+  margin-bottom: 21px;
+}
+a {
+  transition: color 460ms cubic-bezier(0.7, 0, 0.3, 1);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+[class^=fa-],
+[class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.5;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (min-width: 1024px) {
+  .visually-hidden--desktop {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+/*.visually-hidden--tablet-landscape {
+    @include tablet-portrait {
+      @include no-display;
+    }
+}*/
+@media (min-width: 768px) {
+  .visually-hidden--mobile {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 0.857rem;
+  padding-right: 0.857rem;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 460ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+@media (min-width: 1024px) {
+  .button {
+    font-size: 1rem;
+    height: 48px;
+    padding-left: 2.285rem;
+    padding-right: 2.285rem;
+  }
+}
+
+.button--primary {
+  color: transparent;
+  background-color: var(--button-primary__background);
+  border-color: white;
+}
+.button--primary:hover {
+  background-color: var(--button-primary__background--hover);
+}
+
+.button--secondary {
+  color: var(--button-secondary__background__color);
+  border-color: var(--button-secondary__background__color);
+}
+
+.button--no-styles {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.logo {
+  margin-bottom: 0;
+}
+
+.logo__img {
+  height: 21px;
+  width: 97px;
+}
+@media (min-width: 1024px) {
+  .logo__img {
+    height: 24px;
+    width: 194px;
+  }
+}
+
+.header {
+  background-color: var(--primary__color);
+  min-height: 3.938rem;
+}
+@media (min-width: 1024px) {
+  .header {
+    height: 66px;
+  }
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.313rem;
+  padding-bottom: 1.313rem;
+}
+
+.header__drawers-list__item {
+  display: inline-block;
+  width: 20px;
+  padding-left: 0.938rem;
+  padding-right: 0.938rem;
+}
+
+.fa-search,
+.fa-shopping-cart,
+.fa-bars {
+  color: white;
+}
+
+.link_01,
+.link_02,
+.link_03 {
+  text-decoration: none;
+  color: var(--neutral-color);
+}
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

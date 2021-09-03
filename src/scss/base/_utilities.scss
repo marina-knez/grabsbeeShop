@@ -8,14 +8,14 @@
     }
 }
   
-.visually-hidden--tablet-landscape {
-    @include tablet-landscape {
+/*.visually-hidden--tablet-landscape {
+    @include tablet-portrait {
       @include no-display;
     }
-}
+}*/
     
 .visually-hidden--mobile {
-    @include phone  {
+    @include tablet--portrait  {
       @include no-display;
     }
 }
